@@ -1,6 +1,5 @@
 .header {
 	position: relative;
-	padding: 30px 0 42px;
 
 	.container {
 		display: flex;
@@ -19,6 +18,13 @@
 		padding: 20px 0;
 		background-color: $main-bg;
 	}
+}
+
+.header__wrapper {
+	position: relative;
+	max-width: 1536px;
+	margin: 0 auto;
+	padding: 30px 0 42px;
 }
 
 .header__logo {
