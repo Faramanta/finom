@@ -1,0 +1,167 @@
+.tabs {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	@media (max-width: $desktop-width) {
+		flex-direction: column;
+	}
+
+}
+
+.tabs__bar {
+	padding: 32px 0 4px;
+	width: 304px;
+	background: $white;
+	box-shadow: 0px 1px 3px rgba(34, 43, 85, 0.03), 0px 8px 12px rgba(52, 53, 70, 0.02);
+	border-radius: 16px;
+
+	@media (max-width: $desktop-width) {
+		width: 100%;
+	}
+
+	@media (max-width: $tablet-width) {
+		box-shadow: none;
+		padding: 24px 0;
+	}
+}
+
+.tabs__group {
+	margin: 0 0 28px;
+
+	@media (max-width: $tablet-width) {
+		padding: 0;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+}
+
+.tabs__group-ttl {
+	margin: 0 0 0 32px;
+	font-family: 'Metropolis', Arial, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: (14 / 12);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: $dark-grey;
+
+	@media (max-width: $tablet-width) {
+		margin: 0;
+	}
+}
+
+.tabs__list {
+	margin: 6px 0 0;
+
+	&--margin {
+		margin: 18px 0 0;
+
+		@media (max-width: $desktop-width) {
+			margin: 0;
+		}
+	}
+	@media (max-width: $desktop-width) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	@media (max-width: $tablet-width) {
+		margin: 5px 0 0;
+	}
+}
+
+.tabs__item {
+	position: relative;
+	display: flex;
+	align-items: center;
+	height: 40px;
+	width: 100%;
+	border: none;
+	background: transparent;
+	padding: 10px 32px;
+	cursor: pointer;
+
+	&.active {
+		&:before {
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 0;
+			bottom: 0;
+			height: 40px;
+			width: 4px;
+			background: $pink;
+
+			@media (max-width: $desktop-width) {
+				display: none;
+			}
+		}
+
+		.tabs__txt {
+			font-weight: bold;
+
+			@media (max-width: $desktop-width) {
+				color: $pink;
+			}
+		}
+	}
+
+	&:hover {
+		&:before {
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 0;
+			bottom: 0;
+			height: 40px;
+			width: 4px;
+			background: transparentize($pink, 0.7);
+
+			@media (max-width: $desktop-width) {
+				display: none;
+			}
+		}
+	}
+
+	@media (max-width: $desktop-width) {
+		width: auto;
+	}
+
+	@media (max-width: $tablet-width) {
+		padding: 7px 0;
+		margin: 0 20px 0 0;
+		height: auto;
+	}
+}
+
+.tabs__txt {
+	font-size: 16px;
+	line-height: 1;
+	color: $black;
+}
+
+
+.tabs__content {
+	width: calc(100% - 336px);
+
+	@media (max-width: $desktop-width) {
+		width: 100%;
+		margin: 32px 0 0;
+	}
+
+	@media (max-width: $tablet-width) {
+		margin: 10px 0 0;
+	}
+}
+
+.tabs__panel {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+

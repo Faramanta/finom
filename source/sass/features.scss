@@ -1,0 +1,152 @@
+.features {
+	position: relative;
+	background: $light-blue;
+	border-radius: 12px;
+	padding: 25px 20px 15px;
+
+	@media (max-width: $hd-desktop-width) {
+		padding: 25px 40px 15px;
+	}
+
+	@media (max-width: $desktop-width) {
+		padding: 25px 24px 15px;
+	}
+
+	@media (max-width: $tablet-width) {
+		padding: 24px;
+	}
+}
+
+.features__close {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 24px;
+	height: 24px;
+	padding: 0;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+
+	@media (max-width: $hd-desktop-width) {
+		top: 19px;
+		right: 34px;
+	}
+	@media (max-width: $tablet-width) {
+		top: 10px;
+		right: 10px;
+	}
+}
+
+.features__ttl {
+	margin: 0;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: (29 / 24);
+	color: $blue;
+	font-family: $title_font_family;
+	letter-spacing: -0.4px;
+
+	@media (max-width: $tablet-width) {
+		font-size: 18px;
+	}
+}
+
+.features__list {
+	list-style: none;
+	margin: 16px 0 0;
+	padding: 0;
+	max-width: 300px;
+}
+
+.features__item {
+	position: relative;
+	padding: 0 0 0 27px;
+	margin: 0 0 8px;
+
+	&::before {
+		position: absolute;
+		content: '';
+		background: url("../img/icon-check.svg") no-repeat center;
+		width: 24px;
+		height: 24px;
+		left: 0;
+	}
+}
+
+.features__txt {
+	font-size: 14px;
+	line-height: (21 / 14);
+	color: $black;
+	margin: 0;
+}
+
+.features__price-block {
+	position: absolute;
+	right: 40px;
+	top: 51px;
+	text-align: right;
+	max-width: 160px;
+
+	@media (max-width: $tablet-width) {
+		position: relative;
+		top: auto;
+		right: auto;
+		text-align: left;
+		max-width: 100%;
+		margin: 10px 0 0;
+	}
+}
+
+.features__price {
+	font-family: $title_font_family;
+	color: $black;
+	margin: 0;
+}
+
+.features__price-value {
+	font-weight: bold;
+	font-size: 24px;
+	line-height: (29 / 24);
+	margin: 0 4px 0 0;
+}
+
+.features__price-period {
+	font-size: 16px;
+	line-height: (29 / 24);
+}
+
+.features__price-note {
+	font-size: 12px;
+	line-height: (16 / 12);
+	color: $dark-grey;
+	margin: 10px 0 0;
+	letter-spacing: 0.1px;
+
+	@media (max-width: $tablet-width) {
+		margin: 6px 0 0;
+	}
+}
+
+.features__button {
+	position: absolute;
+	bottom: 23px;
+	right: 41px;
+	background: $pink;
+	color: $white;
+	padding: 0 16px;
+
+	&:hover {
+		background: transparentize($pink, 0.1);
+	}
+
+	@media (max-width: $tablet-width) {
+		position: relative;
+		bottom: auto;
+		right: auto;
+		margin: 20px auto 0;
+	}
+}

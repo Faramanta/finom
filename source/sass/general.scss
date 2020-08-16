@@ -1,0 +1,126 @@
+@font-face {
+	font-family: "Metropolis";
+	src: url("../fonts/metropolis.woff2") format("woff2"), url("../fonts/metropolis.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Metropolis";
+	src: url("../fonts/metropolisbold.woff2") format("woff2"), url("../fonts/metropolisbold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Lato";
+	src: url("../fonts/lato.woff2") format("woff2"), url("../fonts/lato.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	min-width: 320px;
+	margin: 0;
+	font-size: 14px;
+	line-height: (18 / 14);
+	background-color: $main-bg;
+	font-family: $base_font_family;
+	color: $black;
+	box-sizing: border-box;
+
+	@media (max-width: $tablet-width) {
+		background-color: $white;
+	}
+}
+
+.visually-hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+}
+
+.container {
+	//position: relative;
+	width: 100%;
+	max-width: 1184px;
+	margin: 0 auto;
+	padding: 0 32px;
+
+	@media (max-width: $tablet-width) {
+		padding: 0 24px;
+	}
+}
+
+.ttl1 {
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 39px;
+	margin: 0;
+}
+
+.ttl2 {
+	margin: 0;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: (43 / 36);
+	color: $black;
+	font-family: $title_font_family;
+	letter-spacing: -0.7px;
+
+	@media (max-width: $tablet-width) {
+		font-size: 28px;
+	}
+}
+
+.ttl3 {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: (24 / 20);
+	font-family: $title_font_family;
+	color: $black;
+	letter-spacing: -0.3px;
+
+	&--icon {
+		&::after {
+			position: absolute;
+			content: '';
+			background: url("../img/icon-dizzy.svg") no-repeat center;
+			width: 24px;
+			height: 24px;
+			right: -32px;
+			top: 50%;
+			margin-top: -12px;
+
+			@media (max-width: $tablet-width) {
+				display: none;
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 1024px){
+
+}
+
+@media screen and (max-width: 1280px) {
+
+}

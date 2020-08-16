@@ -1,0 +1,155 @@
+.card {
+	padding: 40px 60px;
+	background: $white;
+	box-shadow: 0px 1px 3px rgba(34, 43, 85, 0.03), 0px 8px 12px rgba(52, 53, 70, 0.02);
+	border-radius: 16px;
+
+	& + .card {
+		margin: 32px 0 0;
+	}
+
+	@media (max-width: $hd-desktop-width) {
+		padding: 24px 32px;
+	}
+
+	@media (max-width: $tablet-width) {
+		padding: 0;
+		box-shadow: none;
+	}
+}
+
+
+.card__header {
+	position: relative;
+	border-bottom: 1px solid rgba(34, 43, 85, 0.08);
+	padding: 0 0 40px;
+
+	@media (max-width: $tablet-width) {
+		padding: 0 0 24px;
+	}
+}
+
+.card__header-link {
+	display: block;
+	position: absolute;
+	right: 1px;
+	top: 9px;
+	margin: 0;
+	font-size: 16px;
+	line-height: (24 / 16);
+	color: $blue;
+	text-decoration: none;
+
+	@media (max-width: $tablet-width) {
+		position: relative;
+		top: auto;
+		right: auto;
+		margin: 10px 0 0;
+	}
+}
+
+.card__price {
+	display: flex;
+	align-items: baseline;
+	margin: 9px 0 0;
+	font-family: $title_font_family;
+
+	@media (max-width: $tablet-width) {
+		margin: 15px 0 0;
+	}
+}
+
+.card__price-value {
+	font-weight: bold;
+	font-size: 28px;
+	line-height: (34 / 28);
+	margin: 0 11px 0 0;
+
+	@media (max-width: $tablet-width) {
+		font-size: 24px;
+	}
+}
+
+.card__price-period {
+	color: $dark-grey;
+	font-size: 21px;
+}
+
+.card__term {
+	margin: 17px 0 0;
+
+	@media (max-width: $tablet-width) {
+		margin: 10px 0 0;
+	}
+}
+
+.card__term-txt {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 20px 0 0;
+	font-size: 14px;
+	line-height: 1;
+	color: $dark-grey;
+	letter-spacing: 0.2px;
+}
+
+.card__term-link {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	font-size: 14px;
+	line-height: 1;
+	color: $blue;
+	text-decoration: none;
+	letter-spacing: 0.2px;
+
+	@media (max-width: $tablet-width) {
+		margin: 10px 0 0;
+	}
+}
+
+.card__button-group {
+	display: flex;
+	align-items: center;
+	margin: 20px 0 0;
+
+	@media (max-width: $tablet-width) {
+		flex-direction: column;
+	}
+}
+
+.card__button {
+	background: $blue;
+	font-size: 14px;
+	line-height: (16 / 14);
+	color: $white;
+	margin: 0 16px 0 0;
+	padding: 5px 17px;
+
+	&:hover {
+		background: transparentize($blue, 0.1);
+	}
+
+	@media (max-width: $tablet-width) {
+		margin: 0;
+	}
+}
+
+.card__button-note {
+	font-size: 14px;
+	line-height: (20 / 14);
+	color: $black;
+	margin: 0;
+}
+
+.card__body {
+	padding: 40px 0 0;
+
+	@media (max-width: $tablet-width) {
+		padding: 24px 0 0;
+	}
+}
+
+.card__features {
+	margin: 19px 0 0;
+}

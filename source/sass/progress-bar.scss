@@ -1,0 +1,64 @@
+.progress-bar__top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.progress-bar__ttl {
+	margin: 0;
+	font-size: 16px;
+	line-height: 1;
+	color: $black;
+}
+
+.progress-bar__count {
+	margin: 0;
+	font-size: 16px;
+	line-height: 1;
+	color: $black;
+
+	&--accent {
+		color: $dark-grey;
+	}
+}
+
+.progress-bar__bar {
+	position: relative;
+	height: 9px;
+	width: 100%;
+	border-radius: 4px;
+	background: $grey;
+	margin: 10px 0 0;
+}
+
+.progress-bar__item {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	border-radius: 4px;
+
+	&--success {
+		background: $blue;
+	}
+
+	&--error {
+		background: $pink;
+	}
+}
+
+.progress-bar__note {
+	display: inline-block;
+	margin: 8px 0 0;
+	font-size: 14px;
+	line-height: (20 / 14);
+	color: $dark-grey;
+
+}
+.progress-bar__link {
+	display: inline-block;
+	font-size: 14px;
+	line-height: (20 / 14);
+	color: $dark-grey;
+	text-decoration: underline;
+}

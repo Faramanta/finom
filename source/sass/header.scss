@@ -1,0 +1,125 @@
+.header {
+	position: relative;
+	padding: 30px 0 42px;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+
+		@media (max-width: $tablet-width) {
+			flex-direction: column;
+		}
+	}
+
+	@media (max-width: $desktop-width) {
+		padding: 24px 0;
+	}
+
+	@media (max-width: $tablet-width) {
+		padding: 20px 0;
+		background-color: $main-bg;
+	}
+}
+
+.header__logo {
+	position: absolute;
+	left: 32px;
+	top: 33px;
+	display: block;
+	padding: 5px 0;
+	margin: 0 40px 0 0;
+
+	@media screen and (max-width: $wide-desktop-width) {
+		position: relative;
+		left: auto;
+		top: auto;
+	}
+
+	@media (max-width: $hd-desktop-width) {
+		margin: 0 30px 0 0;
+	}
+
+	@media (max-width: $tablet-width) {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.header__main-nav {
+	@media (max-width: $desktop-width) {
+		margin: 16px 0 0;
+	}
+
+	@media (max-width: $tablet-width) {
+		margin: 0;
+	}
+}
+
+.header__main-block {
+	display: flex;
+	align-items: center;
+
+	@media (max-width: $desktop-width) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+.header__control {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	right: 32px;
+
+	@media screen and (max-width: $wide-desktop-width) {
+		position: relative;
+		right: 0;
+	}
+
+	@media (max-width: $desktop-width) {
+		position: absolute;
+		top: 20px;
+		right: 24px;
+	}
+
+	@media (max-width: $tablet-width) {
+		position: relative;
+		top: auto;
+		right: auto;
+		margin: 20px 0 0;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.header__button {
+	margin: 0 32px 0 0;
+	padding: 0 16px;
+	background: rgba(65, 93, 232, 0.12);
+	color: $blue;
+
+	&:hover {
+		background: transparentize($blue, 0.8);
+	}
+
+	.button__txt {
+		@media (max-width: $tablet-width) {
+			display: none;
+		}
+	}
+
+	.button__img {
+		@media (max-width: $tablet-width) {
+			margin: 0;
+		}
+	}
+
+	@media (max-width: $tablet-width) {
+		padding: 5px 8px;
+	}
+}
+
+
+
+
+
